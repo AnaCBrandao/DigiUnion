@@ -1,5 +1,6 @@
 <?php session_start();
 
+<<<<<<< HEAD
 	//if(!empty($_POST)){
 		$titulo=$_POST["titulo"];
 		$local=$_POST["local"];
@@ -72,4 +73,14 @@
 	//}
 	
 
+=======
+
+	$_SESSION["titulo"][]=$_POST["titulo"];
+	$_SESSION["local"][]=$_POST["local"];
+	$_SESSION["tipo"][]=$_POST["tipo"];
+	$_SESSION["descricao"][]=$_POST["descricao"];
+	$_SESSION["contribui"][]=$_POST["contribui"];
+	$_SESSION["foto"][]=$_POST["foto"];
+	
+>>>>>>> 8201e000cf6b864218bc7c1e021270eea06f5f81
  ?>

@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 8201e000cf6b864218bc7c1e021270eea06f5f81
     if(!empty($_POST)) {
 
         $email = $_POST["email_login"];
@@ -23,7 +27,13 @@
             if(mysqli_num_rows($resultado) == 1) {
                 $pessoa = mysqli_fetch_assoc($resultado);
                 $json = '{"valido": true}';
+<<<<<<< HEAD
             }
+=======
+            } else {
+				echo "Algum dado incorreto";
+			}
+>>>>>>> 8201e000cf6b864218bc7c1e021270eea06f5f81
 
             mysqli_free_result($resultado);
             mysqli_close($conexao);
