@@ -1,0 +1,77 @@
+<?php session_start();?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigUnion</title>
+	<link rel="stylesheet" href="../css1/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<script src="../js/jquery-3.5.1.min.js"></script>
+	<script src="../js/menu.js"></script>
+	</head>
+<body>
+	<div class="col-12">
+	<!--CABEÇALHO-->
+	<div>
+		<div class="row d-flex justify-content-evenly">
+			<nav class="bg_preto">
+				<div class="col-4">
+					<img src="../logo/logo.png" width="150px" height="150px">
+				</div>
+				<div class="col-8">
+					<nav class="bg_preto">
+						<div class="menu-item">
+							<a class="branco" href="../index.php">Página inicial</a>
+						</div>
+		<?php
+			require "menu.php";
+		
+				$html = printarMenu(false);
+			
+				echo $html;
+		?>
+						</nav>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!--CADASTRO DE PROJETO-->
+	<div class="card position-relative margem start-50 translate-middle mb-5 p-3 shadow-lg col-8
+	border border-info justify-content-center">
+        <p>FAÇA LOGIN
+		</p>
+    </div>
+	<!--RODAPÉ-->
+	<footer class="bg-dark text-light mt-5 static-bottom">
+		<div class="container-fluid py-3">
+		 	<div class="col-10">
+				 <h3>Sobre</h3>
+				<p>
+					Esse projeto foi criado para a conclusão do curso de TI, temos como objetivo ajudar no desenvolvimento de projetos independentes.
+				</p>
+				<h4> Entre em contato conosco:</h4>
+				<h5>digiunionsuporte@gmail.com</h5>
+		  	</div>
+		</div>
+		<div class="text-center" style="background-color: #333; padding: 20px;" >
+		  &copy 2022 DigUnion
+		</div>
+	 </footer>
+	 
+	<script src="../js/valida_proj.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../js/app.js"></script>
+	<script src="../js/jquery-3.5.1.min.js"></script>
+	<script src="../js/jquery.mask.min.js"></script>
+	<script src="../js/modal.js"></script>
+	<script src="../js/md5.js"></script>
+	<script src="../js/main.js"></script>
+	
+</body>
+</html>
