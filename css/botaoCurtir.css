@@ -15,7 +15,12 @@
     transition: all 1s;
 }
 
-.curtir p{
+.p_preto {
+    color: #222;
+    font-size: medium;
+}
+
+.p_branco{
     color: aliceblue;
     font-size: medium;
 }

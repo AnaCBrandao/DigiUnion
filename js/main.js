@@ -35,13 +35,21 @@ function deletarProjeto(id){
 
 function botaoCurtir(id){
 	var dados = {"id": id};
-
-    $.post("curtir.php", dados, function(retorno) {			  
-		//$(`#likes {id}`).text(retorno);
+	console.log(dados);
+    $.post("html/curtir.php", dados, function(retorno) {			  
+		$(`#`+id).text(retorno);
     });
 }
 
-$(function(){ 
+function botaoCurtirAlt(id){
+	var dados = {"id": id};
+	console.log(dados);
+    $.post("curtir.php", dados, function(retorno) {			  
+		$(`#`+id).text(retorno);
+    });
+}
+
+$(function(){    
     //VALIDAÇÕES DE CADASTRO
 
     $("#opcao").click(function() { //caixinha pra visualizar a senha

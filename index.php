@@ -251,7 +251,7 @@
 											<div class="elemento__botao__interno">
 												<img src="./imagens/ic-curtiu.png" alt="Imagem polegar curtiu" class="icone-curtir" onClick=botaoCurtir('.$id.')>
 											</div>
-											<p class="p-3" id="likes'.$id.'">'.$curtidas.'</p>
+											<p class="mt-2 ms-2 p_branco" id="'.$id.'">'.$curtidas.'</p>
 										</div>
 									 <input type="submit" class="btn btn-primary position-relative top-100 start-50 translate-middle" style="max-width: 7rem;" value="Visitar"/>	
 								</form>
@@ -279,26 +279,24 @@
 	</div>
 	</div>
 
-	<!--RODAPÉ
+	<!--RODAPÉ-->
 	<footer class="bg-dark text-light mt-5 static-bottom">
-		<div class="container-fluid py-3">
-		 	<div class="col-12">
-				 <h3>Sobre</h3>
+		<div class="container-fluid py-3 d-flex">
+			<img src="logo/logo.png" width="100px" height="100px">
+		 	<div class="col-6">
+				<h4>Sobre</h4>
 				<p>
 					Esse projeto foi criado para a conclusão do curso de TI, temos como objetivo ajudar no desenvolvimento de projetos independentes.
 				</p>
-
 				<h4> Entre em contato conosco:</h4>
-
 				<h5>digiunionsuporte@gmail.com</h5>
-
 		  	</div>
 		</div>
 
 		<div class="text-center" style="background-color: #333; padding: 20px;" >
 		  &copy 2022 DigUnion
 		</div>
-	</footer>-->
+	</footer>
 
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

@@ -7,6 +7,7 @@
     <title>Projeto X</title>
 	<link rel="stylesheet" href="..\css1\bootstrap.min.css">
 	<link rel="stylesheet" href="..\css\style.css">
+	<link rel="stylesheet" href="../css/botaoCurtir.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<script src="../js/jquery-3.5.1.min.js"></script>
@@ -128,14 +129,14 @@
 	</div>
 	
 	<div class="odio">
-	<div class="">
+	<div>
 		<div class="card mb-3 position-absolute top-50 start-50 translate-middle col-10">
 		  <div class="row g-0">
 			  	<?php
 					require "conexao.php";
 					
 					$id = $_POST["codigo"];
-					$sql = "SELECT id, titulo, descricao, local, capa FROM `projetos` WHERE id=$id";
+					$sql = "SELECT id, titulo, descricao, local, capa, likes FROM `projetos` WHERE id=$id";
 
 					$resultado = mysqli_query($conexao, $sql);
 
@@ -145,10 +146,17 @@
 					$descricao = $projeto["descricao"];
 					$local = $projeto["local"];
 					$capa = $projeto["capa"];
+					$curtidas = $projeto["likes"];
 
 							 echo '
 							 <div class="col-md-4 my-4 ms-3">
 								  <img src="../'.$capa.'" class="img-fluid rounded-start" alt="...">
+								</div>
+								<div class="curtir position-relative top-0 end-0 ms-4 mt-4">
+									<div class="elemento__botao__interno">
+										<img src="../imagens/ic-curtiu.png" alt="Imagem polegar curtiu" class="icone-curtir" onClick=botaoCurtirAlt('.$id.')>
+									</div>
+									<p class="p_preto mt-2 ms-2" id="'.$id.'">'.$curtidas.'</p>
 								</div>
 								<div class="col-md-6 ms-5">
 								  <div class="card-body text-center ms-5">
