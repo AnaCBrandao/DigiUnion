@@ -4,7 +4,6 @@ function editarProjeto(id){
 	var dados = {"id": id};
         
     $.post("buscar_proj.php", dados, function(retorno) {
-		console.log(retorno);
 			
 		retorno.forEach(function(r){
 		
@@ -17,6 +16,7 @@ function editarProjeto(id){
 			$('#local_p').val(local);
 			$('#desc_p').val(desc);
 			$('#contribuicao_p').val(contribuicao);
+			$('#contribuicao_p').append(`<input type="hidden" name="codigo" value="`+id+`" />`);
 		});
     });
 }
@@ -140,7 +140,7 @@ $(function(){
 					var id = r.id;			
 					
 					 html = html+`
-								<div class="card mx-2 col" style="max-width: 26rem;">
+								<div class="card mx-auto col" style="max-width: 20rem;">
 								  <img src="`+capa+`" class="card-img-top" alt="Imagem do projeto">
 								  <div class="card-body">
 									<h5 class="card-title">`+titulo+`</h5>
@@ -155,7 +155,8 @@ $(function(){
 				});
 			}else{
 				
-				 html =`<div class="alert alert-danger" role="alert">
+				 html =`
+				 <div class="alert alert-danger col-7 mx-auto text-center" role="alert">
 				  Ainda não existem projetos cadastrados nessa categoria!
 				</div>`;
 			}
@@ -212,6 +213,7 @@ $(function(){
 	
 
 	$("#edita_proj").click(function(){ //validação
+		var id = $("input[name=codigo]").val();
 		var titulo = $('#titulo_p').val();
 		var local = $('#local_p').val();
 		var cat = $('#cat_p').val();
@@ -220,9 +222,8 @@ $(function(){
 	
 		var dados = {"id": id, "titulo": titulo,"local": local,"categoria": cat,"descricao": desc,"contribuicao": contribuicao};
 		
-		console.log(dados);
-		
-		$.post("edita_proj.php", dados, function(retorno) {			
+		$.post("edita_proj.php", dados, function(retorno) {	
+			alert("retorno");		
 			if(retorno.valido) {    
 				alert("Projeto editado");
 			}

@@ -180,10 +180,6 @@
 					  <div class="col-md-12">
 						<label for="inputAddress" class="form-label">Contribuição</label>
 						<input  type="text" class="form-control" id="contribuicao_p"  value="">
-					  </div>
-					  <div class="col-md-12">
-						<label for="inputAddress" class="form-label">Capa</label>
-						<input  type="text" class="form-control" id="capa_p"  value="">
 					  </div><br/><br/><br/><br/><br/>
 					
 					  <div class="col-11 ">
@@ -198,25 +194,23 @@
 
 
 	<!--RODAPÉ-->
-	<!--<footer class="bg-dark text-light mt-5 static-bottom">
-		<div class="container-fluid py-3">
-		 	<div class="col-8">
-				 <h3>Sobre</h3>
-				<p>
-					Esse projeto foi criado para a conclusão do curso de TI, temos como objetivo ajudar no desenvolvimento de projetos independentes.
-				</p>
-				
-				<h4> Entre em contato conosco:</h4>
-
-				<h5>digiunionsuporte@gmail.com</h5>
-			
+	<footer class="bg-dark text-light mt-5 position-relative top-100 start-0">
+		<div class="container-fluid py-3 d-flex">
+		 	<div class="col-8 text-center">
+				<p><b>Entre em contato conosco:</b></p>
+				<p>digiunionsuporte@gmail.com</p>
+		  	</div>
+			<div class="col-2 text-center">
+				<img src="../imagens/instagram.png" width="25px" height="25px" alt="Logo instagram">
+				<img src="../imagens/facebook.png" width="25px" height="25px" alt="Logo facebook">
+				<img src="../imagens/linkedin.png" width="25px" height="25px" alt="Logo linkedin">
 		  	</div>
 		</div>
-		
+
 		<div class="text-center" style="background-color: #333; padding: 20px;" >
-		  &copy 2022 DigUnion 
+		  &copy 2022 DigUnion
 		</div>
-	 </footer>-->
+	</footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

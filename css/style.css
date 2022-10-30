@@ -10,10 +10,18 @@ body {
 	background-color: #22222A;
 }
 
+.odio {
+    margin-top: 20em;
+    margin-bottom: 5em;
+}
+
 .margem-carrossel {
     margin-left: 15em;
 }
 
+.texto-branco{
+    color: white;
+}
 
 .vermelho {
     background-color: rgb(245, 217, 217);
@@ -25,7 +33,7 @@ body {
 }
 
 #projfil {
-	
+	min-height: 60em;
 	background-color: #6f7da1;
 }
 
@@ -193,9 +201,9 @@ nav {
 /* Modal Content/Box */
 .modal-content {
 	background-color: #fefefe;
-	margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	margin: 5% 15% 15% 10%; /* 5% from the top, 15% from the bottom and centered */
 	/*border: 1px solid #888;*/
-	width: 50%; /* Could be more or less, depending on screen size */
+	width: 80%; /* Could be more or less, depending on screen size */
 	height: 80%;
 }
 
@@ -235,6 +243,7 @@ a:hover {
 
 .margem {
 	margin-top: 400px;
+    background-color: #008B8B;
 }
 
 .content {

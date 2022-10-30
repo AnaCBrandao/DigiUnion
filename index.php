@@ -19,10 +19,10 @@
 	<div class="col-12">
 	<!--CABEÇALHO-->
 	<div> 
-		<div class="row d-flex justify-content-evenly">
-			<nav class="bg_preto">
+		<div class=" row d-flex justify-content-evenly ">
+			<nav>
 				<div class="col-4">
-					<img src="logo/logo.png" width="150px" height="150px">
+					<img src="logo/logo.png" width="150px" height="150px" alt="Logo Digiunion">
 				</div>
 				<div class="col-8">
 					<nav class="bg_preto">
@@ -47,7 +47,7 @@
 				</div>
 		</div>
 		
-		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false" style="min-height: 50em;">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -195,7 +195,7 @@
 				$linhas = mysqli_num_rows($resultado);
 
 			
-				echo '<select class="form-select" id="categoria" >
+				echo '<select class="form-select mt-5" id="categoria" >
 						<option value="" selected disabled hidden>Filtrar por categoria</option>
 				';
 				if($linhas != 0) {
@@ -209,7 +209,6 @@
 								';
 						}
 						echo '</select>
-						<label for="floatingSelect">  Filtrar por categoria</label>
 						</div>
 					</form>';
 
@@ -260,7 +259,7 @@
 											</div>
 											<p class="mt-2 ms-2 p_branco" id="'.$id.'">'.$curtidas.'</p>
 										</div>
-									 <input type="submit" class="btn btn-primary position-relative top-100 start-50 translate-middle" style="max-width: 7rem;" value="Visitar"/>	
+									 <input type="submit" class="btn btn-primary position-relative bottom-0 start-50 translate-middle" style="max-width: 7rem;" value="Visitar"/>	
 								</form>
 						  </div>
 						</div>
@@ -289,14 +288,14 @@
 	<!--RODAPÉ-->
 	<footer class="bg-dark text-light mt-5 static-bottom">
 		<div class="container-fluid py-3 d-flex">
-			<img src="logo/logo.png" width="100px" height="100px">
-		 	<div class="col-6">
-				<h4>Sobre</h4>
-				<p>
-					Esse projeto foi criado para a conclusão do curso de TI, temos como objetivo ajudar no desenvolvimento de projetos independentes.
-				</p>
-				<h4> Entre em contato conosco:</h4>
-				<h5>digiunionsuporte@gmail.com</h5>
+		 	<div class="col-8 text-center">
+				<p><b>Entre em contato conosco:</b></p>
+				<p>digiunionsuporte@gmail.com</p>
+		  	</div>
+			<div class="col-2 text-center">
+				<img src="imagens/instagram.png" width="25px" height="25px" alt="Logo instagram">
+				<img src="imagens/facebook.png" width="25px" height="25px" alt="Logo facebook">
+				<img src="imagens/linkedin.png" width="25px" height="25px" alt="Logo linkedin">
 		  	</div>
 		</div>
 
