@@ -46,57 +46,64 @@
 					</nav>
 				</div>
 		</div>
-	<!--CARROSSEL-->
-	<!--<div class="container tamanho50">
-	<div class="content-width">
-	<div class="slideshow">
-    
-    <div class="slideshow-items">
-		<?php
-					/*require "html/conexao.php";
-					$sql = "SELECT id, titulo, descricao, capa FROM `projetos` order by id desc";
+		
+		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 4"></button>
+	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 5"></button>
+</div>
+  <div class="carousel-inner margem-carrossel">
+  <?php
+		require "html/conexao.php";
+		$sql = "SELECT id, titulo, descricao, capa, likes FROM `projetos` order by likes desc";
 
-					$resultado = mysqli_query($conexao, $sql);
+		$resultado = mysqli_query($conexao, $sql);
+		$linhas = mysqli_num_rows($resultado);
 
-					for($i=1; $i<=3; $i++){
-					  $projeto = mysqli_fetch_assoc($resultado);
-					  $capa = $projeto["capa"];
-					  $titulo = $projeto["titulo"];
-					  $descricao = $projeto["descricao"];
-
-							 echo '
-								<div class="item">
-								<div class="item-image-container">
-								  <img class="item-image" src="'.$capa.'" />
-								</div>
-								
-								<div class="item-description">
-								<h3 class="vertical-part"><b>'.$titulo.'</b></h3><br/>
-									  <p class="vertical-part">
-										<b>'.$descricao.'</b>
-									  </p>
-									 
-								</div>
-								</div>
-								
-								
-					';
-					}
-					mysqli_free_result($resultado);
-					mysqli_close($conexao);*/
-				?>
-   
-    <div class="controls">
-      <ul>
-        <li class="control" data-index="0"></li>
-        <li class="control" data-index="1"></li>
-        <li class="control" data-index="2"></li>
-      </ul>
-    </div>
+		for($i=1; $i<=5; $i++){
+		  $projeto = mysqli_fetch_assoc($resultado);
+		  $capa = $projeto["capa"];
+		  $titulo = $projeto["titulo"];
+			
+		  if($i<= $linhas){
+		    if($i==1){
+				echo '
+				<div class="carousel-item active center">
+					<img src="'.$capa.'" class="d-block w-100" alt="'.$titulo.'">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>'.$titulo.'</h5>
+					</div>
+				</div>';
+			}else{
+				echo '
+				<div class="carousel-item">
+					<img src="'.$capa.'" class="d-block w-100" alt="'.$titulo.'">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>'.$titulo.'</h5>
+					</div>
+				</div>';
+			}
+		  }else{
+			break;
+		  }
+			
+		}
+		mysqli_free_result($resultado);
+		mysqli_close($conexao);
+	?>
   </div>
-  </div>
-  </div>
-</div>-->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
   <!--MODAL LOGIN-->
 	<div class="modal">

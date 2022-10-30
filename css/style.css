@@ -10,6 +10,10 @@ body {
 	background-color: #22222A;
 }
 
+.margem-carrossel {
+    margin-left: 15em;
+}
+
 
 .vermelho {
     background-color: rgb(245, 217, 217);
@@ -209,7 +213,7 @@ a:hover {
 }
 
 .bg_preto {
-	background-color: black;
+	background: rgba(0, 0, 0, 0.7);
 }
 
 .branco {
